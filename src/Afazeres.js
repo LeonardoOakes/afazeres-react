@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import List from "./List";
 import Form from "./Form";
+import Item from "./Item";
 import "./Afazeres.css";
 
 function Afazeres() {
   const [items, setItems] = useState([]);
 
-  function onAddItem(item) {
+  function onAddItem(text) {
+    let item = new Item(text);
+
     setItems([...items, item]);
   }
 

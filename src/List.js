@@ -1,13 +1,13 @@
 import React from "react";
 
 function List(props) {
-    return (
-      <ul>
-        {props.items.map((item) => (
-          <li>{item}</li>
-        ))}
-      </ul>
-    );
-  }
+  return (
+    <ul>
+      {props.items.map((item) => (
+        <li key={item.id}>{item.text}</li>
+      ))}
+    </ul>
+  );
+}
 
-  export default List
+export default List;

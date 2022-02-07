@@ -18,7 +18,7 @@ function Form(props) {
   return (
     <form>
       <input onChange={handleChange} type="text" value={text}></input>
-      <button onClick={addItem}>Adicionar</button>
+      <button className="btn-adc" onClick={addItem}>Adicionar</button>
     </form>
   );
 }
