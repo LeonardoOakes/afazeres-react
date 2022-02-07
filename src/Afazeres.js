@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import List from "./List";
-import Form from "./Form";
-import Item from "./Item";
+import List from "./components/List";
+import Form from "./components/Form";
+import Item from "./components/Item";
 import "./Afazeres.css";
 
 function Afazeres() {
