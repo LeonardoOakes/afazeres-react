@@ -3,6 +3,7 @@ import List from "./components/List";
 import Form from "./components/Form";
 import Item from "./components/Item";
 import "./Afazeres.css";
+import Modal from "./components/Modal";
 
 const SAVED_ITEMS = "savedItems";
 
@@ -43,10 +44,15 @@ function Afazeres() {
 
   return (
     <div className="container">
-      <h1>Afazeres</h1>
+      <header className="header">
+        <h1>Afazeres</h1>
+        <button className="addButton">+</button>
+      </header>
 
-      <Form onAddItem={onAddItem}></Form>
       <List onDone={onDone} onItemDeleted={onItemDeleted} items={items}></List>
+      <Modal>
+        <Form onAddItem={onAddItem}></Form>
+      </Modal>
     </div>
   );
 }

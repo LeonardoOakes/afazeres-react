@@ -1,4 +1,5 @@
 .container {
+  /* position: absolute; */
   margin: auto;
   max-width: 600px;
 }
@@ -31,4 +32,37 @@ ul{
   box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addButton{
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+}
+
+.modal{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+}
+
+.cardModal{
+  padding: 20px;
+  background-color: white;
 }
