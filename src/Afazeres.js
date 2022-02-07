@@ -14,7 +14,7 @@ function Afazeres() {
       <h1>Afazeres</h1>
       <form>
         <input onChange={handleChange} type="text"></input>
-        <button>Adicionar</button>
+        <button>Adicionar itens a lista</button>
       </form>
       <ul>
         <li>{text}</li>
