@@ -15,7 +15,17 @@ function Afazeres() {
 
   function onItemDeleted(item) {
     let filteredItems = items.filter((it) => it.id != item.id);
-    setItems(filteredItems)
+    setItems(filteredItems);
+  }
+
+  function onDone(item) {
+    let updatedItems = items.map((it) => {
+      if (it.id === item.id) {
+        it.done = !it.done;
+      }
+      return it;
+    });
+    setItems(updatedItems);
   }
 
   return (
@@ -23,7 +33,7 @@ function Afazeres() {
       <h1>Afazeres</h1>
 
       <Form onAddItem={onAddItem}></Form>
-      <List onItemDeleted={onItemDeleted} items={items}></List>
+      <List onDone={onDone} onItemDeleted={onItemDeleted} items={items}></List>
     </div>
   );
 }
