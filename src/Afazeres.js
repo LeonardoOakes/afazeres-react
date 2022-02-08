@@ -52,7 +52,7 @@ function Afazeres() {
   return (
     <div className="container">
       <header className="header">
-        <h1>Afazeres</h1>
+        <h1>Cheklist</h1>
         <button
           className="addButton"
           onClick={() => {
