@@ -8,6 +8,7 @@ import Modal from "./components/Modal";
 const SAVED_ITEMS = "savedItems";
 
 function Afazeres() {
+  const [showModal, setShowModal] = useState(false);
   const [items, setItems] = useState([]);
 
   useEffect(() => {
@@ -25,6 +26,7 @@ function Afazeres() {
     let item = new Item(text);
 
     setItems([...items, item]);
+    onHideModal();
   }
 
   function onItemDeleted(item) {
@@ -40,17 +42,29 @@ function Afazeres() {
       return it;
     });
     setItems(updatedItems);
+    
+  }
+
+  function onHideModal() {
+    setShowModal(false);
   }
 
   return (
     <div className="container">
       <header className="header">
         <h1>Afazeres</h1>
-        <button className="addButton">+</button>
+        <button
+          className="addButton"
+          onClick={() => {
+            setShowModal(true);
+          }}
+        >
+          +
+        </button>
       </header>
 
       <List onDone={onDone} onItemDeleted={onItemDeleted} items={items}></List>
-      <Modal>
+      <Modal show={showModal} onHideModal={onHideModal}>
         <Form onAddItem={onAddItem}></Form>
       </Modal>
     </div>

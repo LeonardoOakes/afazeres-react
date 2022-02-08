@@ -8,17 +8,17 @@
   margin-left: 15px;
 }
 
-.done{
+.done {
   text-decoration: line-through;
 }
 
-ul{
+ul {
   list-style: none;
   margin: 0px;
   padding: 0px;
 }
 
-.item{
+.item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,19 +28,21 @@ ul{
   margin-top: 6px;
 }
 
-.card{
+.card {
   box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-
 }
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.addButton{
+.addButton:hover {
+  background-color: grey;
+}
+.addButton {
   width: 50px;
   height: 50px;
   font-size: 30px;
@@ -50,7 +52,7 @@ ul{
   border-radius: 25px;
 }
 
-.modal{
+.modal {
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -59,10 +61,14 @@ ul{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: grey;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.cardModal{
+.hide {
+  display: none;
+}
+
+.cardModal {
   padding: 20px;
   background-color: white;
 }
