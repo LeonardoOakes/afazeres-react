@@ -1,2 +1,2 @@
-# afazeres-react
-Lista de afazeres desenvolvida durante treino de react.
+# checklist-react
+Checklist desenvolvida para treinar conhecimentos em react.

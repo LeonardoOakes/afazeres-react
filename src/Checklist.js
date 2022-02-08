@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import List from "./components/List";
 import Form from "./components/Form";
 import Item from "./components/Item";
-import "./Afazeres.css";
+import "./Checklist.css";
 import Modal from "./components/Modal";
 
 const SAVED_ITEMS = "savedItems";
 
-function Afazeres() {
+function Checklist() {
   const [showModal, setShowModal] = useState(false);
   const [items, setItems] = useState([]);
 
@@ -71,4 +71,4 @@ function Afazeres() {
   );
 }
 
-export default Afazeres;
+export default Checklist;
