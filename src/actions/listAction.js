@@ -12,4 +12,3 @@ export function deleteItem(id) {
 export function changeDone(id) {
   return { type: "CHANGE_DONE", payload: id };
 }
-

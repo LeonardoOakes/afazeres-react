@@ -12,13 +12,14 @@ function DoneImg(props) {
 }
 
 function ItemList(props) {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   return (
     <li>
       <Card className={props.item.done ? "done item" : "item"}>
         {props.item.text}
         <div>
           <button
+            className="check"
             onClick={() => {
               dispatch(changeDone(props.item.id));
             }}
@@ -27,6 +28,7 @@ function ItemList(props) {
           </button>
 
           <button
+            className="delete"
             onClick={() => {
               dispatch(deleteItem(props.item.id));
             }}
