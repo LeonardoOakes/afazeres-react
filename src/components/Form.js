@@ -21,7 +21,7 @@ function Form(props) {
   }
   return (
     <form>
-      <input onChange={handleChange} type="text" value={text}></input>
+      <input onChange={handleChange} type="text" value={text} placeholder="Adicione uma tarefa"></input>
       <button className="btn-adc" onClick={addItemEvent}>
         Adicionar
       </button>
